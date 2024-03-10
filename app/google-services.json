@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1008432385247",
+    "project_id": "a24a-10357-l10",
+    "storage_bucket": "a24a-10357-l10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008432385247:android:b986e31635d53d2e092d6a",
+        "android_client_info": {
+          "package_name": "dev.tomco.my24a_10357_l10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL25pL73mZ-hvZDPTZ62y2GoU7bG7mW6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
