@@ -1,6 +1,10 @@
 package dev.tomco.my24a_10357_l10;
 
+import android.content.Context;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Locale;
+
+
+
 public class MainActivity extends AppCompatActivity {
+
+    String api_key = BuildConfig.GOOGLE_MAPS_API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +30,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
     }
 }

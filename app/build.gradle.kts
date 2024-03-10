@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.bouncycastle.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     id("com.google.gms.google-services")
@@ -7,6 +9,11 @@ android {
     namespace = "dev.tomco.my24a_10357_l10"
     compileSdk = 34
 
+    buildFeatures{
+        buildConfig = true
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "dev.tomco.my24a_10357_l10"
         minSdk = 26
@@ -14,7 +21,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "GOOGLE_MAPS_API_KEY", "\"${properties["GoogleMapsApiKey"]}\"")
+        manifestPlaceholders["GOOGLE_MAPS_API_KEY"] = properties["GoogleMapsApiKey"]?.toString() ?: ""
     }
 
     buildTypes {
@@ -27,6 +37,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
